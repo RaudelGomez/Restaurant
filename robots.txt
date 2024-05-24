@@ -1,0 +1,6 @@
+#Robots.txt zu http://www.example.com
+
+User-agent: *
+Disallow: /datenschutz.html
+Disallow: /impressum.html
+Disallow: /agb.html

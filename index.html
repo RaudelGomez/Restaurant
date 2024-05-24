@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mein Restaurant</title>
+    <style>
+      html {
+        border: 1px solid;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0px;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+      }
+      .atf-image {
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
+      }
+
+      .dancingFont {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+      }
+
+      .headline {
+        color: #ffc100;
+        font-size: 54px;
+        filter: drop-shadow(2px 6px 10px rgba(0, 0, 0, 0.5));
+      }
+
+      h1 {
+        font-weight: 700;
+        font-style: bold;
+      }
+      h2 {
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      .main-container {
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 800px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-bottom: 64px;
+      }
+
+      .container:hover {
+        background-color: rgba(216, 214, 214, 0.2);
+      }
+
+      .googleMaps {
+        width: 100%;
+        height: 400px;
+      }
+
+      .footer {
+        background-color: rgba(20, 20, 30, 1);
+        color: white;
+        padding: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0;
+      }
+
+      .footer-link {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      .footer-link:hover {
+        text-decoration: underline;
+        color: orange;
+      }
+
+      .body-link {
+        color: #ffc100;
+        text-decoration: none;
+      }
+
+      .body-link:hover {
+        color: blue;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .menu {
+        position: absolute;
+        top: 32px;
+        right: 100px;
+      }
+
+      .menu a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 24px;
+        filter: drop-shadow(2px 11px 10px rgba(0, 0, 0, 0.5));
+        cursor: pointer;
+      }
+      .menu a:hover {
+        color: #ffc100;
+      }
+
+      .order-btn {
+        color: black !important;
+        background-color: #ffc100;
+        padding: 16px;
+      }
+      .order-btn:hover {
+        background-color: #f9d45e;
+      }
+
+      .container-photos {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #photos figure {
+        width: 30%;
+        margin: 1px;
+      }
+
+      .photos-img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="cec3b24c-aaf5-4753-b074-ebe576cb7c48"
+      data-blockingmode="auto"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <img class="atf-image" src="./img/aot.jpg" alt="Tisch mit Essen" />
+
+    <div class="main-container">
+      <h1 class="dancingFont headline">Herzlich Willkommen</h1>
+      Hier findest du einen Überblick über unsere Speisen
+    </div>
+
+    <div class="menu">
+      <a href="#contact">RESERVIEREN</a>
+      <a href="#" class="order-btn">BESTELL ONLINE</a>
+      <a href="#contact">KONTAKT</a>
+      <a href="#address">ANFAHRT</a>
+      <a href="#photos">FOTOS</a>
+    </div>
+
+    <div class="container">
+      <h2 class="dancingFont ti">Unsere Öffnungszeiten</h2>
+      <table>
+        <tr>
+          <td>Mo - Fr</td>
+          <td>12:00 - 23:00 Uhr</td>
+        </tr>
+        <tr>
+          <td>Sa</td>
+          <td>11:00 - 24:00 Uhr</td>
+        </tr>
+        <tr>
+          <td>So</td>
+          <td>11:00 - 24:00 Uhr</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="container" id="address">
+      <h2 class="dancingFont">Anfahrt</h2>
+      Unsere Adresse lautet: Kriegelsteinerstraße 18, 81476 München
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5330.078921927116!2d11.495382676636323!3d48.09018077123821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479dd91722432a67%3A0xbd14807366a6e909!2sKriegelsteinerstra%C3%9Fe%2018%2C%2081476%20M%C3%BCnchen!5e0!3m2!1ses-419!2sde!4v1711378454196!5m2!1ses-419!2sde"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="googleMaps"
+      ></iframe>
+    </div>
+
+    <div class="container">
+      <h2 class="dancingFont">Tageskarte</h2>
+      <table>
+        <tr>
+          <td>1</td>
+          <td>Pizza</td>
+          <td>8,99 €</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Pilzpfanne</td>
+          <td>11,99 €</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Bauernsalat</td>
+          <td>5,99 €</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Kaiserschmarrn</td>
+          <td>4,99 €</td>
+        </tr>
+      </table>
+      Jetzt die Tageskarte
+      <a href="./downloads/tageskarte.pdf" target="_blank" class="body-link"
+        >herunterladen</a
+      >
+    </div>
+
+    <div class="container" id="photos">
+      <h2 class="dancingFont">Fotos</h2>
+      <div class="container-photos">
+        <figure>
+          <img src="./img/barbecue.jpg" alt="barbecue" class="photos-img" />
+        </figure>
+        <figure>
+          <img src="./img/salmon.jpg" alt="salmon" class="photos-img" />
+        </figure>
+        <figure>
+          <img src="./img/food.jpg" alt="food" class="photos-img" />
+        </figure>
+      </div>
+    </div>
+
+    <div class="container" id="contact">
+      <h2 class="dancingFont">Kontakt</h2>
+      So kannst du uns kontaktieren: <br />
+      Telefon: <a href="tel:0151400740067" class="body-link">0151400740067</a>
+      <br />
+      E-mail:
+      <a href="mailto:info@restaurant.com" class="body-link"
+        >info@restaurant.com</a
+      >
+    </div>
+    <div class="container footer">
+      <div>(c) Copyriht 2024 Raudel Gómez</div>
+      <div>
+        <a href="./impressum.html" class="footer-link">Impressum</a> |
+        <a href="./datenschutz.html" class="footer-link">Datenschutz</a>
+      </div>
+    </div>
+  </body>
+</html>
